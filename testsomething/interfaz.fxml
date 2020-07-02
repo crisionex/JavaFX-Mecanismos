@@ -1,0 +1,656 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1007.0" style="-fx-background-color: #;" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="testsomething.interfazController">
+   <children>
+      <StackPane layoutX="200.0" layoutY="33.0" prefHeight="567.0" prefWidth="808.0" style="-fx-background-color: #f8f8f8;">
+         <children>
+            <Pane fx:id="barrasDesfazado" prefHeight="567.0" prefWidth="752.0" style="-fx-background-color: #f8f8f8;">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="54.0" stroke="TRANSPARENT" strokeType="INSIDE" width="808.0">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0" startY="1.0">
+                           <stops>
+                              <Stop color="#d0f4ff" />
+                              <Stop color="#acffac" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Rectangle>
+                  <Label layoutX="14.0" layoutY="3.0" prefHeight="46.0" prefWidth="527.0" text="Mecanismo 4 Barras Desfasado">
+                     <font>
+                        <Font name="Microsoft YaHei UI Light" size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txta1" layoutX="58.0" layoutY="125.0" style="-fx-background-color: #636363;">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtb1" layoutX="58.0" layoutY="171.0" style="-fx-background-color: #636363;">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtc1" layoutX="58.0" layoutY="215.0" style="-fx-background-color: #636363;">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtd1" layoutX="58.0" layoutY="259.0" style="-fx-background-color: #636363;">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="58.0" layoutY="78.0" prefHeight="25.0" prefWidth="149.0" text="Barras">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt21" layoutX="376.0" layoutY="172.0" style="-fx-background-color: #636363;">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="32.0" layoutY="129.0" prefHeight="20.0" prefWidth="10.0" text="a">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="271.0" layoutY="174.0" text="Angulo θ2">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tblResultados1" editable="true" layoutY="387.0" prefHeight="180.0" prefWidth="808.0" stylesheets="@Style.css">
+                     <columns>
+                        <TableColumn fx:id="d31" prefWidth="204.0" text="   " />
+                        <TableColumn fx:id="seccion31" prefWidth="189.0" text="Theta 3" />
+                        <TableColumn fx:id="d41" prefWidth="185.0" text="   " />
+                        <TableColumn fx:id="seccion41" prefWidth="229.0" text="Theta 4" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="378.0" layoutY="78.0" prefHeight="25.0" prefWidth="149.0" text="Datos adicionales.">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="calcular1" layoutX="288.0" layoutY="322.0" mnemonicParsing="false" onAction="#Calcular1" prefHeight="37.0" prefWidth="123.0" style="-fx-background-color: #636363;" text="Calcular" textFill="#f8f8f8">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="18.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="273.0" layoutY="128.0" text="Angulo θ1">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtan1" layoutX="376.0" layoutY="126.0" style="-fx-background-color: #636363;">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="32.0" layoutY="262.0" prefHeight="20.0" prefWidth="10.0" text="d">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="32.0" layoutY="218.0" prefHeight="20.0" prefWidth="10.0" text="c">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="32.0" layoutY="174.0" prefHeight="20.0" prefWidth="11.0" text="b">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="barrasDescentrado" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f8f8f8;">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="54.0" stroke="TRANSPARENT" strokeType="INSIDE" width="807.0">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0" startY="1.0">
+                           <stops>
+                              <Stop color="#fff988" />
+                              <Stop color="#ffae68" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Rectangle>
+                  <Label layoutX="14.0" layoutY="3.0" prefHeight="46.0" prefWidth="527.0" text="MBC">
+                     <font>
+                        <Font name="Microsoft YaHei UI Light" size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txta222" layoutX="58.0" layoutY="125.0" style="-fx-background-color: #636363;">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtb2" layoutX="58.0" layoutY="171.0" style="-fx-background-color: #636363;">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtc2" layoutX="58.0" layoutY="215.0" style="-fx-background-color: #636363;">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="58.0" layoutY="78.0" prefHeight="25.0" prefWidth="149.0" text="Barras">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt22" layoutX="376.0" layoutY="125.0" style="-fx-background-color: #636363;">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txta22" layoutX="376.0" layoutY="171.0" style="-fx-background-color: #636363;">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="34.0" layoutY="128.0" text="a">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="35.0" layoutY="174.0" text="b">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="34.0" layoutY="218.0" text="c">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="278.0" layoutY="129.0" text="Angulo θ2">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tblResultados2" editable="true" layoutY="387.0" prefHeight="180.0" prefWidth="807.0" stylesheets="@Style.css">
+                     <columns>
+                        <TableColumn fx:id="d32" prefWidth="197.0" text="    " />
+                        <TableColumn fx:id="seccion32" prefWidth="197.0" text="Theta 3" />
+                        <TableColumn fx:id="d42" prefWidth="201.0" text="   " />
+                        <TableColumn fx:id="seccion42" prefWidth="211.0" text="Theta 4" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="378.0" layoutY="78.0" prefHeight="25.0" prefWidth="149.0" text="Datos adionales.">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="calcular2" layoutX="284.0" layoutY="315.0" mnemonicParsing="false" onAction="#Calcular2" prefHeight="37.0" prefWidth="123.0" style="-fx-background-color: #636363;" text="Calcular" textFill="#f8f8f8">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="18.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="278.0" layoutY="174.0" text="Angulo θ4">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="desc" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f8f8f8;">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="54.0" stroke="TRANSPARENT" strokeType="INSIDE" width="808.0">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0" startY="1.0">
+                           <stops>
+                              <Stop color="#abffd1" />
+                              <Stop color="#61f3ff" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Rectangle>
+                  <Label layoutX="14.0" layoutY="3.0" prefHeight="46.0" prefWidth="527.0" text="MBC Invertido">
+                     <font>
+                        <Font name="Microsoft YaHei UI Light" size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txta4" layoutX="58.0" layoutY="125.0" style="-fx-background-color: #636363;">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtb4" layoutX="58.0" layoutY="171.0" style="-fx-background-color: #636363;">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtan41" layoutX="373.0" layoutY="125.0" style="-fx-background-color: #636363;">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="58.0" layoutY="78.0" prefHeight="25.0" prefWidth="149.0" text="Barras">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtan42" layoutX="373.0" layoutY="171.0" style="-fx-background-color: #636363;">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="34.0" layoutY="128.0" text="a">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="35.0" layoutY="174.0" text="b">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="275.0" layoutY="175.0" text="Angulo θ2">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tblResultados4" editable="true" layoutY="387.0" prefHeight="180.0" prefWidth="808.0" stylesheets="@Style.css">
+                     <columns>
+                        <TableColumn fx:id="d34" prefWidth="207.0" text="  " />
+                        <TableColumn fx:id="seccion34" prefWidth="186.0" text="Angulo" />
+                        <TableColumn fx:id="d44" prefWidth="212.0" text="  " />
+                        <TableColumn fx:id="seccion44" prefWidth="202.0" text="Barra" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="378.0" layoutY="78.0" prefHeight="25.0" prefWidth="149.0" text="Datos adionales.">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="calcular4" layoutX="288.0" layoutY="317.0" mnemonicParsing="false" onAction="#Calcular4" prefHeight="37.0" prefWidth="123.0" style="-fx-background-color: #636363;" text="Calcular" textFill="#f8f8f8">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="18.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="275.0" layoutY="128.0" text="Angulo θ1">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="barrasSimple" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #f8f8f8;">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="54.0" stroke="TRANSPARENT" strokeType="INSIDE" width="807.0">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0" startY="1.0">
+                           <stops>
+                              <Stop color="#d0f4ff" />
+                              <Stop color="#ffacf8" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Rectangle>
+                  <Label layoutX="14.0" layoutY="3.0" prefHeight="46.0" prefWidth="527.0" text="Mecanismo 4 Barras Simple">
+                     <font>
+                        <Font name="Microsoft YaHei UI Light" size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txta" layoutX="58.0" layoutY="125.0" style="-fx-background-color: #636363;">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtb" layoutX="58.0" layoutY="171.0" style="-fx-background-color: #636363;">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtc" layoutX="58.0" layoutY="215.0" style="-fx-background-color: #636363;">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtd" layoutX="58.0" layoutY="259.0" style="-fx-background-color: #636363;">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="58.0" layoutY="78.0" prefHeight="25.0" prefWidth="149.0" text="Barras">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txt2" layoutX="376.0" layoutY="125.0" style="-fx-background-color: #636363;">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="34.0" layoutY="128.0" text="a">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="35.0" layoutY="174.0" text="b">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="34.0" layoutY="218.0" text="c">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="34.0" layoutY="262.0" text="D">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="278.0" layoutY="129.0" text="Angulo θ2">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tblResultados" editable="true" layoutY="387.0" prefHeight="180.0" prefWidth="808.0" stylesheets="@Style.css">
+                     <columns>
+                        <TableColumn fx:id="d3" prefWidth="201.0" text="   " />
+                        <TableColumn fx:id="seccion3" prefWidth="195.0" text="Theta 3" />
+                        <TableColumn fx:id="d4" prefWidth="200.0" text="  " />
+                        <TableColumn fx:id="seccion4" prefWidth="211.0" text="Theta 4" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="378.0" layoutY="78.0" prefHeight="25.0" prefWidth="149.0" text="Datos adionales.">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="calcular" layoutX="284.0" layoutY="316.0" mnemonicParsing="false" onAction="#Calcular" prefHeight="37.0" prefWidth="123.0" style="-fx-background-color: #636363;" text="Calcular" textFill="#f8f8f8">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="18.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane fx:id="invertido" prefHeight="567.0" prefWidth="796.0" style="-fx-background-color: #f8f8f8;">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" height="54.0" stroke="TRANSPARENT" strokeType="INSIDE" width="807.0">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0" startY="1.0">
+                           <stops>
+                              <Stop color="#87dcff" />
+                              <Stop color="#a364f3" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                  </Rectangle>
+                  <Label layoutX="14.0" layoutY="3.0" prefHeight="46.0" prefWidth="527.0" text="MBC Descentrado">
+                     <font>
+                        <Font name="Microsoft YaHei UI Light" size="22.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txta3" layoutX="58.0" layoutY="125.0" style="-fx-background-color: #636363;">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtb3" layoutX="58.0" layoutY="171.0" style="-fx-background-color: #636363;">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtc3" layoutX="58.0" layoutY="215.0" style="-fx-background-color: #636363;">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtac3" layoutX="279.0" layoutY="171.0" style="-fx-background-color: #636363;">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txtve3" layoutX="279.0" layoutY="216.0" style="-fx-background-color: #636363;">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="txt3" layoutX="279.0" layoutY="125.0" style="-fx-background-color: #636363;">
+                     <font>
+                        <Font name="Microsoft JhengHei Light" size="12.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="58.0" layoutY="78.0" prefHeight="25.0" prefWidth="149.0" text="Barras">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="34.0" layoutY="128.0" text="a">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="35.0" layoutY="174.0" text="b">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="38.0" layoutY="218.0" text="c">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="240.0" layoutY="128.0" text="θ2">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tblResultados3" editable="true" layoutY="387.0" prefHeight="180.0" prefWidth="808.0" stylesheets="@Style.css">
+                     <columns>
+                        <TableColumn fx:id="d33" prefWidth="198.0" text="  " />
+                        <TableColumn fx:id="seccion33" prefWidth="198.0" text="Configuracion abierta" />
+                        <TableColumn fx:id="d43" prefWidth="194.0" text="  " />
+                        <TableColumn fx:id="seccion43" prefWidth="217.0" text="Configuracion Cerrada" />
+                     </columns>
+                  </TableView>
+                  <Label layoutX="281.0" layoutY="78.0" prefHeight="25.0" prefWidth="149.0" text="Datos adionales.">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="calcular3" layoutX="71.0" layoutY="298.0" mnemonicParsing="false" onAction="#Calcular3" prefHeight="37.0" prefWidth="123.0" style="-fx-background-color: #636363;" text="Calcular" textFill="#f8f8f8">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="18.0" />
+                     </font>
+                  </Button>
+                  <Label layoutX="241.0" layoutY="174.0" text="a2">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="238.0" layoutY="218.0" text="ω2">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="15.0" />
+                     </font>
+                  </Label>
+                  <LineChart fx:id="plotterx" animated="false" layoutX="444.0" layoutY="78.0" prefHeight="294.0" prefWidth="363.0" stylesheets="@Style.css" title="Gráficas">
+                    <xAxis>
+                      <CategoryAxis label="Angulo θ2" side="BOTTOM" fx:id="x" />
+                    </xAxis>
+                    <yAxis>
+                      <NumberAxis fx:id="y" label="u/s^2" side="LEFT" />
+                    </yAxis>
+                     <styleClass>
+                        <String fx:value="chart-horizontal-grid-lines" />
+                        <String fx:value="chart-alternative-row-fill" />
+                        <String fx:value="chart-horizontal-grid-lines" />
+                        <String fx:value="chart-plot-background" />
+                        <String fx:value="chart-series-line" />
+                     </styleClass>
+                  </LineChart>
+                  <ComboBox fx:id="cbox" layoutX="226.0" layoutY="298.0" onAction="#basement" prefHeight="37.0" prefWidth="150.0" promptText="Graficas" style="-fx-background-color: #515151;" stylesheets="@Style.css" />
+               </children>
+            </Pane>
+            <Pane fx:id="inf" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;">
+               <children>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#00cf6e" height="191.0" stroke="BLACK" strokeType="INSIDE" width="808.0" />
+                  <TextArea editable="false" layoutX="26.0" layoutY="71.0" prefHeight="334.0" prefWidth="417.0" text="-Las posiciones para el mecanismo MBC Descentrado se definen como&#10; Configuracion Abierta y Cerrada, No confundir con theta31 y theta32.&#10;&#10;- Las Barras &quot;d&quot; del mecanismo MBC Descentrado, tanto en configuracion&#10;  Abierta y cerrada cuentan con valor absoluto.&#10;&#10;- Para Definir nuestras posiciones abierta y cerrada, se tomara como&#10;   criterio que la posicion abierta tomara el angulo mayor, mientras que&#10;   nuestra posicion cerrada tomara nuestro angulo menor, refiriendose&#10;   a los resultados obtenidos en theta31 y theta32.&#10;&#10;- Para las graficas del mecanismo MBC Descentrado, las graficas tanto&#10;   &quot;Grafica-1&quot; como para &quot;Grafica-2&quot; son en base a Theta31 o Theta32 &#10;   respectivamente, independientemente si estos valores pertenecen a&#10;    abierto o cerrado.&#10;&#10;- respetar las unidades del problema a ingresar.&#10;&#10;- Introduzca los valores correctamente.&#10;&#10;- Si existe un desface en el mecanismo, debera tomarlo en cuenta&#10;  en los datos iniciales y finales.&#10;">
+                     <font>
+                        <Font name="Microsoft JhengHei UI Light" size="12.0" />
+                     </font></TextArea>
+                  <Line endX="-100.0" endY="-186.0" layoutX="543.0" layoutY="257.0" startX="-100.0" startY="146.0" stroke="#00bf16" />
+                  <Line endX="316.0" layoutX="127.0" layoutY="71.0" startX="-100.0" stroke="#00bf16" />
+                  <Line endX="315.0" layoutX="128.0" layoutY="405.0" startX="-100.0" stroke="#00bf16" />
+                  <Line endX="-100.0" endY="-186.0" layoutX="127.0" layoutY="257.0" startX="-101.0" startY="148.0" stroke="#00bf16" />
+                  <Line endX="-10.0" endY="-59.0" layoutX="485.0" layoutY="420.0" startX="-100.0" stroke="#ffd000" strokeWidth="2.0" />
+                  <Line endX="-10.0" endY="-59.0" layoutX="497.0" layoutY="432.0" startX="-100.0" stroke="#ffd000" strokeWidth="2.0" />
+                  <ImageView fitHeight="352.0" fitWidth="259.0" layoutX="499.0" layoutY="191.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@logo.png" />
+                     </image>
+                  </ImageView>
+                  <Label layoutX="28.0" layoutY="14.0" prefHeight="37.0" prefWidth="416.0" text="Criterios" textFill="WHITE">
+                     <font>
+                        <Font name="Arial Bold" size="43.0" />
+                     </font>
+                  </Label>
+                  <Button layoutX="95.0" layoutY="430.0" mnemonicParsing="false" onAction="#setConfirmar" prefHeight="49.0" prefWidth="101.0" style="-fx-background-color: #00cf6e;" text="Aceptar" textFill="WHITE" />
+                  <Button layoutX="236.0" layoutY="430.0" mnemonicParsing="false" onAction="#setCancelar" prefHeight="49.0" prefWidth="101.0" style="-fx-background-color: #ff444b;" text="Cancelar" textFill="WHITE" />
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+      <VBox fx:id="some" alignment="CENTER_RIGHT" layoutY="-7.0" prefHeight="607.0" prefWidth="200.0" style="-fx-background-color: #333333;" stylesheets="@../../../../css/Style.css">
+         <children>
+            <Pane prefHeight="123.0" prefWidth="196.0">
+               <children>
+                  <ImageView fitHeight="122.0" fitWidth="208.0" layoutX="-4.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@image%20(3).png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button fx:id="test" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#barSim" prefHeight="65.0" prefWidth="207.0" style="-fx-background-color: #333333;" stylesheets="@Style.css" text="4 Barras Simple" textFill="#f8f8f8">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <graphic>
+                  <FontAwesomeIconView fill="#f8f8f8" glyphName="GEARS" size="20" />
+               </graphic>
+               <padding>
+                  <Insets left="25.0" />
+               </padding>
+               <font>
+                  <Font name="Microsoft YaHei UI" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="test1" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#barraDes" prefHeight="65.0" prefWidth="207.0" style="-fx-background-color: #333333;" stylesheets="@Style.css" text="4 Barras Desfasado" textFill="#f8f8f8">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <graphic>
+                  <FontAwesomeIconView fill="#f8f8f8" glyphName="GEARS" size="20" />
+               </graphic>
+               <padding>
+                  <Insets left="25.0" />
+               </padding>
+               <font>
+                  <Font name="Microsoft YaHei UI" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="test2" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#barraDesc" prefHeight="65.0" prefWidth="207.0" style="-fx-background-color: #333333;" stylesheets="@Style.css" text="MBC" textFill="#f8f8f8">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <graphic>
+                  <FontAwesomeIconView fill="#f8f8f8" glyphName="GEARS" size="20" />
+               </graphic>
+               <padding>
+                  <Insets left="25.0" />
+               </padding>
+               <font>
+                  <Font name="Microsoft YaHei UI" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="test3" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#mbci" prefHeight="65.0" prefWidth="207.0" style="-fx-background-color: #333333;" stylesheets="@Style.css" text="MBC Descentrado" textFill="#f8f8f8">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <graphic>
+                  <FontAwesomeIconView fill="#f8f8f8" glyphName="GEARS" size="20" />
+               </graphic>
+               <padding>
+                  <Insets left="25.0" />
+               </padding>
+               <font>
+                  <Font name="Microsoft YaHei UI" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="test4" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#mbcd" prefHeight="65.0" prefWidth="207.0" style="-fx-background-color: #333333;" stylesheets="@Style.css" text="MBC Invertido" textFill="#f8f8f8">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <graphic>
+                  <FontAwesomeIconView fill="#f8f8f8" glyphName="GEARS" size="20" x="5.0" />
+               </graphic>
+               <padding>
+                  <Insets left="25.0" />
+               </padding>
+               <font>
+                  <Font name="Microsoft YaHei UI" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="informacion" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#infox" prefHeight="65.0" prefWidth="207.0" style="-fx-background-color: #333333;" stylesheets="@Style.css" text="Criterios" textFill="#f8f8f8">
+               <graphic>
+                  <FontAwesomeIconView fill="#f8f8f8" glyphName="INFO" size="20" x="5.0" />
+               </graphic>
+               <padding>
+                  <Insets left="25.0" />
+               </padding>
+               <font>
+                  <Font name="Microsoft YaHei UI" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </VBox>
+      <AnchorPane layoutY="-4.0" prefHeight="37.0" prefWidth="1007.0" style="-fx-background-color: #333333;">
+         <children>
+            <Button fx:id="btnC" layoutX="979.0" layoutY="6.0" mnemonicParsing="false" onAction="#Cerrar" style="-fx-background-color: #333333;">
+               <graphic>
+                  <FontAwesomeIconView fx:id="c" fill="#f54d4d" glyphName="CLOSE" onDragDetected="#Cerrar" size="20" />
+               </graphic></Button>
+            <Button fx:id="salvar" layoutY="6.0" mnemonicParsing="false" onAction="#setSalvar" style="-fx-background-color: #333333;">
+               <graphic>
+                  <FontAwesomeIconView fill="#f8f8f8" glyphName="SAVE" size="20" />
+               </graphic>
+            </Button>
+            <Label layoutX="201.0" layoutY="10.0" prefHeight="17.0" prefWidth="308.0" text="Ricardo Ivanovich Quilantan Ramirez" textFill="#f8f8f8" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

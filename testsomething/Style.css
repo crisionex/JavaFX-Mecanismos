@@ -1,0 +1,72 @@
+
+
+#test.button{
+    -fx-bacground-color: #333333;
+}
+
+
+#test.button :hover{
+    -fx-background-color: #636363;
+
+}
+
+#tests.button :pressed{
+    -fx-background-color: #5c5c5c;
+
+}
+
+.text-field{
+    -fx-text-fill: white;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: #3a3a3a;
+}
+
+.combo-box .list-cell 
+{
+    -fx-background: #515151;
+    -fx-text-fill: white;
+}
+
+
+
+.table-view .column-header-background .label{
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.table-view .column-header {
+    -fx-background-color: #3a3a3a;;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #484848;
+    -fx-background-insets: 0;
+    -fx-background-radius: 1;
+}
+
+.chart-plot-background {
+    -fx-background-color: transparent;
+}
+.chart-vertical-grid-lines {
+    -fx-stroke: transparent;
+}
+.chart-horizontal-grid-lines {
+    -fx-stroke: transparent;
+}
+.chart-alternative-row-fill {
+    -fx-fill: transparent;
+    -fx-stroke: transparent;
+    -fx-stroke-width: 0;
+}
+.chart-series-line {    
+    -fx-stroke-width: 2px;
+    -fx-effect: null;
+}
+.default-color1.chart-line-symbol { -fx-background-color: #a264ff, #a264ff; }
+.default-color0.chart-line-symbol { -fx-background-color: #FF3366,#FF3366}
+.default-color2.chart-line-symbol { -fx-background-color: #dda0dd, white; }
+.default-color1.chart-series-line { -fx-stroke: #a264ff; }
+.default-color0.chart-series-line { -fx-stroke: #FF3366}
+.default-color2.chart-series-line { -fx-stroke: #dda0dd; }
